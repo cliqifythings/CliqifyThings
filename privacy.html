@@ -37,92 +37,35 @@
             background: #3f3f46;
         }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(10, 10, 10, 0.85);
-            backdrop-filter: blur(20px);
+        /* Back Link */
+        .back-bar {
+            padding: 24px;
             border-bottom: 1px solid rgba(39, 39, 42, 0.5);
-            padding: 0 24px;
         }
 
-        .nav-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
+        .back-bar a {
+            display: inline-flex;
             align-items: center;
-            justify-content: space-between;
-            height: 70px;
-        }
-
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .nav-logo img {
-            width: 38px;
-            height: 38px;
-            border-radius: 10px;
-        }
-
-        .nav-logo span {
-            font-size: 20px;
-            font-weight: 800;
-            color: #a855f7;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-
-        .nav-links a {
+            gap: 8px;
             color: #a1a1aa;
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
-            transition: all 0.3s;
-            position: relative;
-            padding: 8px 0;
+            transition: color 0.2s;
         }
 
-        .nav-links a:hover {
+        .back-bar a:hover {
             color: #fff;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #a855f7, #c084fc);
-            transition: width 0.3s;
-            border-radius: 2px;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
         }
 
         /* Hero */
         .hero {
-            min-height: 40vh;
+            min-height: 30vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 140px 24px 60px;
+            padding: 60px 24px 40px;
             position: relative;
             overflow: hidden;
         }
@@ -144,10 +87,10 @@
         }
 
         .hero h1 {
-            font-size: 52px;
+            font-size: 48px;
             font-weight: 900;
             color: #fff;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             letter-spacing: -2px;
             background: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #e879f9 100%);
             -webkit-background-clip: text;
@@ -156,7 +99,7 @@
         }
 
         .hero p {
-            font-size: 16px;
+            font-size: 15px;
             color: #71717a;
         }
 
@@ -164,16 +107,16 @@
         .content {
             max-width: 800px;
             margin: 0 auto;
-            padding: 0 24px 100px;
+            padding: 0 24px 80px;
         }
 
         h2 {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 800;
             color: #fff;
-            margin-top: 48px;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
+            margin-top: 40px;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
             border-bottom: 1px solid rgba(168, 85, 247, 0.2);
             letter-spacing: -0.5px;
         }
@@ -183,18 +126,18 @@
         }
 
         p {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             color: #a1a1aa;
             line-height: 1.8;
         }
 
         ul {
             margin-left: 24px;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: #a1a1aa;
             line-height: 1.7;
         }
@@ -210,63 +153,33 @@
             text-decoration: underline;
         }
 
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 60px;
-            padding: 14px 28px;
-            background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
-            color: #fff;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .back-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(168, 85, 247, 0.3);
-            text-decoration: none;
-        }
-
         /* Footer */
         footer {
             border-top: 1px solid #27272a;
-            padding: 40px 24px;
+            padding: 32px 24px;
             text-align: center;
         }
 
         footer p {
-            font-size: 13px;
-            color: #52525b;
+            font-size: 12px;
+            color: #3f3f46;
             margin: 0;
         }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 36px; }
-            h2 { font-size: 20px; }
+            h2 { font-size: 18px; }
         }
     </style>
 <base target="_blank">
 </head>
 <body>
-    <nav>
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="Logo.png" alt="CliqifyThings">
-                <span>CliqifyThings</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#brands">Brands</a></li>
-                <li><a href="terms.html">Terms</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="back-bar">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Home
+        </a>
+    </div>
 
     <section class="hero">
         <div class="hero-bg"></div>
@@ -301,9 +214,9 @@
         <h2>3. Third-Party Platforms</h2>
         <p>Our content may be distributed through third-party services including:</p>
         <ul>
-            <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
-            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.youtube.com">YouTube</a></li>
+            <li><a href="https://www.instagram.com">Instagram</a></li>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
         </ul>
         <p>These platforms may use cookies, analytics, tracking technologies, or collect viewer data according to their own policies.</p>
         <p>Please refer to their privacy policies for additional information.</p>
@@ -332,16 +245,14 @@
 
         <h2>8. Copyright Requests</h2>
         <p>For copyright concerns or content removal requests, contact:</p>
-        <p><a href="mailto:cliqifythings@outlook.com" target="_blank">cliqifythings@outlook.com</a></p>
+        <p><a href="mailto:cliqifythings@outlook.com">cliqifythings@outlook.com</a></p>
 
         <h2>9. Changes to This Policy</h2>
         <p>We may update this Privacy Policy periodically. Updates will be reflected by the revised "Last updated" date.</p>
 
         <h2>10. Contact</h2>
         <p>For privacy, legal, or business inquiries:</p>
-        <p><a href="mailto:cliqifythings@outlook.com" target="_blank">cliqifythings@outlook.com</a></p>
-
-        <a href="index.html" class="back-btn">← Back to Home</a>
+        <p><a href="mailto:cliqifythings@outlook.com">cliqifythings@outlook.com</a></p>
     </div>
 
     <footer>

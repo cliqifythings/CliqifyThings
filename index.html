@@ -7,6 +7,7 @@
     <meta name="description" content="CliqifyThings is a content creation brand for short-form video. Discover mind-blowing facts with CliqifyFacts and must-have products with CliqifyFinds.">
     <meta name="keywords" content="CliqifyThings, CliqifyFacts, CliqifyFinds, short-form video, viral facts, product discovery, content creation">
     <meta name="author" content="CliqifyThings">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://saifbou.github.io/CliqifyThings/">
     <link rel="icon" href="Logo.png">
 
@@ -24,7 +25,7 @@
     <meta property="twitter:title" content="CliqifyThings — Viral Facts & Product Discovery">
     <meta property="twitter:description" content="Your destination for mind-blowing facts and must-have product finds. Short-form content that entertains, educates, and inspires.">
     <meta property="twitter:image" content="https://saifbou.github.io/CliqifyThings/Logo.png">
-<style>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -498,10 +499,103 @@
             max-width: 160px;
         }
 
+        /* Social Section */
+        .social-section {
+            padding: 100px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .social-card {
+            background: linear-gradient(145deg, #18181b 0%, #27272a 100%);
+            border-radius: 24px;
+            padding: 40px;
+            border: 1px solid rgba(63, 63, 70, 0.4);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(63, 63, 70, 0.8);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .social-card h3 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .social-card.facts h3 {
+            color: #60a5fa;
+        }
+
+        .social-card.finds h3 {
+            color: #f87171;
+        }
+
+        .social-card p {
+            color: #71717a;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            text-decoration: none;
+            color: #a1a1aa;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1px solid rgba(63, 63, 70, 0.3);
+        }
+
+        .social-links a:hover {
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .social-links a svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .social-card.facts .social-links a:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+        }
+
+        .social-card.finds .social-links a:hover {
+            border-color: #ef4444;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+        }
+
         /* Footer */
         footer {
             border-top: 1px solid #27272a;
-            padding: 80px 24px 40px;
+            padding: 48px 24px;
+            text-align: center;
         }
 
         .footer-inner {
@@ -509,35 +603,22 @@
             margin: 0 auto;
         }
 
-        .footer-top {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 48px;
-            margin-bottom: 64px;
-        }
-
-        @media (max-width: 768px) {
-            .footer-top {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-        }
-
         .footer-brand {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
             margin-bottom: 16px;
         }
 
         .footer-brand img {
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
         }
 
         .footer-brand span {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 800;
             color: #a855f7;
         }
@@ -545,80 +626,30 @@
         .footer-desc {
             font-size: 14px;
             color: #71717a;
-            line-height: 1.6;
+            margin-bottom: 24px;
         }
 
-        .footer-section h4 {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .footer-legal {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-legal a {
             color: #52525b;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .footer-socials {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .footer-socials a {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #a1a1aa;
             text-decoration: none;
-            font-size: 14px;
-            transition: all 0.2s;
-            padding: 6px 0;
-        }
-
-        .footer-socials a:hover {
-            color: #fff;
-            transform: translateX(4px);
-        }
-
-        .footer-socials a svg {
-            width: 18px;
-            height: 18px;
-            flex-shrink: 0;
-        }
-
-        .footer-socials.facts a:hover {
-            color: #60a5fa;
-        }
-
-        .footer-socials.finds a:hover {
-            color: #f87171;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .footer-links a {
-            color: #a1a1aa;
-            text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             transition: color 0.2s;
         }
 
-        .footer-links a:hover {
+        .footer-legal a:hover {
             color: #a855f7;
         }
 
-        .footer-bottom {
-            border-top: 1px solid #27272a;
-            padding-top: 32px;
-            text-align: center;
-        }
-
-        .footer-bottom p {
-            font-size: 13px;
-            color: #52525b;
+        .footer-copy {
+            font-size: 12px;
+            color: #3f3f46;
         }
 
         @media (max-width: 768px) {
@@ -633,14 +664,22 @@
             .mission h2 { font-size: 28px; }
             .nav-links { gap: 24px; }
             .nav-links a { font-size: 13px; }
+            .social-grid { grid-template-columns: 1fr; }
         }
 
         @media (prefers-reduced-motion: reduce) {
             * { animation: none !important; transition: none !important; }
         }
+
+        :focus-visible {
+            outline: 2px solid #a855f7;
+            outline-offset: 3px;
+        }
     </style>
+<base target="_blank">
+</head>
 <body>
-    <nav>
+    <nav aria-label="Main navigation">
         <div class="nav-inner">
             <a href="#home" class="nav-logo">
                 <img src="Logo.png" alt="CliqifyThings logo - content creation brand">
@@ -695,20 +734,7 @@
                     <h3>CliqifyFacts</h3>
                 </div>
                 <p>Your daily dose of fascinating facts, all in short, engaging videos delivered straight to you. We make learning addictive, one video at a time.</p>
-                <div class="brand-social">
-                    <a href="https://www.youtube.com/@CliqifyFacts" target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                        YouTube
-                    </a>
-                    <a href="https://www.instagram.com/cliqifyfacts/" target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                        Instagram
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=61589478287698" target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        Facebook
-                    </a>
-                </div>
+                
             </div>
             <div class="brand-card finds">
                 <div class="brand-header">
@@ -716,20 +742,7 @@
                     <h3>CliqifyFinds</h3>
                 </div>
                 <p>We find the best products so you don't have to. From trending tech to hidden gems, we curate deals worth your time.</p>
-                <div class="brand-social">
-                    <a href="https://www.youtube.com/@CliqifyFinds" target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                        YouTube
-                    </a>
-                    <a href="https://www.instagram.com/cliqifyfinds/" target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                        Instagram
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=61589651770211" target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        Facebook
-                    </a>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -738,7 +751,7 @@
         <div class="mission">
             <div class="mission-content">
                 <h2>Our Mission</h2>
-                <p>We create short-form content that entertains, informs, and inspires. Whether it's uncovering mind-blowing facts or finding the next must-have product, we deliver value in every second.</p>
+                <p>We turn curiosity into addictive short-form content. Mind-blowing facts that make you smarter. Must-have products that are actually worth your money. Every second counts.</p>
                 <div class="mission-values">
                     <div class="value">
                         <div class="value-icon">🧠</div>
@@ -760,58 +773,63 @@
         </div>
     </section>
 
-    <footer id="social">
+    <section class="social-section" id="social">
+        <div class="section-header">
+            <h2>Follow Us</h2>
+            <p>Stay connected across platforms</p>
+        </div>
+        <div class="social-grid">
+            <div class="social-card facts">
+                <h3>CliqifyFacts</h3>
+                <p>Daily facts and mind-blowing knowledge</p>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/@CliqifyFacts" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        YouTube
+                    </a>
+                    <a href="https://www.instagram.com/cliqifyfacts/" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                        Instagram
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61589478287698" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="social-card finds">
+                <h3>CliqifyFinds</h3>
+                <p>Product discoveries and deals worth your time</p>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/@CliqifyFinds" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        YouTube
+                    </a>
+                    <a href="https://www.instagram.com/cliqifyfinds/" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                        Instagram
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61589651770211" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
         <div class="footer-inner">
-            <div class="footer-top">
-                <div>
-                    <div class="footer-brand">
-                        <img src="Logo.png" alt="CliqifyThings logo - content creation brand">
-                        <span>CliqifyThings</span>
-                    </div>
-                    <p class="footer-desc">A content creation brand for short-form video channels. Entertaining, educating, and inspiring across platforms.</p>
-                </div>
-                <div>
-                    <h4>CliqifyFacts</h4>
-                    <div class="footer-socials facts">
-                        <a href="https://www.youtube.com/@CliqifyFacts" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                            YouTube
-                        </a>
-                        <a href="https://www.instagram.com/cliqifyfacts/" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                            Instagram
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61589478287698" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                            Facebook
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h4>CliqifyFinds</h4>
-                    <div class="footer-socials finds">
-                        <a href="https://www.youtube.com/@CliqifyFinds" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                            YouTube
-                        </a>
-                        <a href="https://www.instagram.com/cliqifyfinds/" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                            Instagram
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61589651770211" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                            Facebook
-                        </a>
-                    </div>
-                </div>
+            <div class="footer-brand">
+                <img src="Logo.png" alt="CliqifyThings logo">
+                <span>CliqifyThings</span>
             </div>
-            <div class="footer-bottom">
-                <div class="footer-links" style="display:flex;justify-content:center;gap:24px;margin-bottom:16px;">
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="privacy.html">Privacy Policy</a>
-                </div>
-                <p>&copy; 2026 CliqifyThings. All rights reserved.</p>
+            <p class="footer-desc">A content creation brand for short-form video. Entertaining, educating, and inspiring.</p>
+            <div class="footer-legal">
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
             </div>
+            <p class="footer-copy">&copy; 2026 CliqifyThings. All rights reserved.</p>
         </div>
     </footer>
 </body>
