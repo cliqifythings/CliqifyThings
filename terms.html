@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — CliqifyThings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e4e4e7;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(39, 39, 42, 0.5);
+            padding: 0 24px;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+        }
+
+        .nav-logo span {
+            font-size: 20px;
+            font-weight: 800;
+            color: #a855f7;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #a1a1aa;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #a855f7, #c084fc);
+            transition: width 0.3s;
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 140px 24px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 16px;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #e879f9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #71717a;
+        }
+
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px 100px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #fff;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+            letter-spacing: -0.5px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #a1a1aa;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #a1a1aa;
+            line-height: 1.7;
+        }
+
+        a {
+            color: #c084fc;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #e879f9;
+            text-decoration: underline;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 60px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+            color: #fff;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(168, 85, 247, 0.3);
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #27272a;
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: #52525b;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            h2 { font-size: 20px; }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="Logo.png" alt="CliqifyThings">
+                <span>CliqifyThings</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#brands">Brands</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>Terms of Service</h1>
+            <p>Last updated: May 19, 2026</p>
+        </div>
+    </section>
+
+    <div class="content">
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or viewing content published by CliqifyThings and its sub-brands, including CliqifyFinds and CliqifyFacts, you agree to these Terms of Service. If you do not agree, please discontinue use of our content and website.</p>
+
+        <h2>2. Content Purpose</h2>
+        <p>All content published by CliqifyThings is provided for entertainment, informational, and media purposes only.</p>
+        <p>While we aim to provide accurate and useful information, we do not guarantee the completeness, accuracy, reliability, or timeliness of any content.</p>
+        <p>CliqifyFacts content may simplify topics for entertainment and short-form educational purposes. Viewers should independently verify important information using authoritative sources.</p>
+
+        <h2>3. No Product Ownership or Endorsement</h2>
+        <p>CliqifyThings, CliqifyFinds, and CliqifyFacts:</p>
+        <ul>
+            <li>Do not manufacture, sell, or distribute products featured in our content</li>
+            <li>Are not officially affiliated with or endorsed by Amazon or product manufacturers unless explicitly stated</li>
+            <li>Do not guarantee product quality, availability, pricing, shipping, or seller reliability</li>
+            <li>Are not responsible for purchasing decisions made by viewers</li>
+            <li>Do not process returns, refunds, or customer support for third-party products</li>
+        </ul>
+        <p>Mention of products or brands does not imply partnership, sponsorship, or endorsement unless explicitly stated.</p>
+
+        <h2>4. Affiliate Disclosure</h2>
+        <p>CliqifyFinds may contain affiliate links to products featured in videos or on the website.</p>
+        <p>As an Amazon Associate, we earn from qualifying purchases.</p>
+        <p>Prices, availability, and product details may change without notice. Viewers are encouraged to conduct their own research before making purchases.</p>
+
+        <h2>5. Intellectual Property</h2>
+        <p>Original edits, branding, narration, compilations, subtitles, and creative elements published by CliqifyThings are the property of CliqifyThings.</p>
+        <p>Third-party assets, including stock footage, product images, music, and other licensed materials, remain the property of their respective owners.</p>
+        <p>Unauthorized reproduction, redistribution, or commercial reuse of original CliqifyThings content is prohibited.</p>
+
+        <h2>6. Third-Party Content Sources</h2>
+        <p>Our content may incorporate third-party assets including:</p>
+        <ul>
+            <li>Stock footage sourced from platforms such as <a href="https://www.pexels.com" target="_blank">Pexels</a></li>
+            <li>AI-generated narration and text-to-speech audio (Kokoro TTS — Apache 2.0 licensed)</li>
+            <li>Royalty-free or licensed background music</li>
+            <li>Product images sourced from public online listings for editorial, review, and commentary purposes</li>
+        </ul>
+        <p>Third-party assets are used under applicable licenses, platform permissions, or editorial/review purposes where applicable.</p>
+
+        <h2>7. Disclaimer of Liability</h2>
+        <p>CliqifyThings is not liable for:</p>
+        <ul>
+            <li>Purchasing decisions or financial losses related to featured products</li>
+            <li>Inaccuracies, omissions, or outdated information</li>
+            <li>Viewer decisions or actions taken after consuming content</li>
+            <li>Technical interruptions or errors</li>
+            <li>Third-party websites, products, or services linked within our content</li>
+            <li>Any direct or indirect damages arising from use of our content</li>
+        </ul>
+        <p>All content is consumed at the viewer's discretion.</p>
+
+        <h2>8. No Professional Advice</h2>
+        <p>Content published by CliqifyThings does not constitute professional, legal, financial, medical, or technical advice.</p>
+        <p>Always consult qualified professionals before making decisions based on online content.</p>
+
+        <h2>9. Third-Party Platforms</h2>
+        <p>Our content may be distributed through platforms including:</p>
+        <ul>
+            <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        </ul>
+        <p>Use of these platforms is also subject to their own terms, policies, and community guidelines.</p>
+
+        <h2>10. Copyright Concerns</h2>
+        <p>If you believe copyrighted material has been used improperly, please contact us and we will review the matter promptly.</p>
+        <p>Contact: <a href="mailto:cliqifythings@outlook.com" target="_blank">cliqifythings@outlook.com</a></p>
+
+        <h2>11. Changes to Terms</h2>
+        <p>We may update these Terms of Service at any time without prior notice. Continued use of our content after updates constitutes acceptance of the revised terms.</p>
+
+        <h2>12. Contact</h2>
+        <p>For business inquiries, partnerships, or legal concerns:</p>
+        <p><a href="mailto:cliqifythings@outlook.com" target="_blank">cliqifythings@outlook.com</a></p>
+
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CliqifyThings. All rights reserved.</p>
+    </footer>
+</body>
+</html>

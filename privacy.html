@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — CliqifyThings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e4e4e7;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(39, 39, 42, 0.5);
+            padding: 0 24px;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+        }
+
+        .nav-logo span {
+            font-size: 20px;
+            font-weight: 800;
+            color: #a855f7;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #a1a1aa;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #a855f7, #c084fc);
+            transition: width 0.3s;
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 140px 24px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 16px;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #e879f9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #71717a;
+        }
+
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px 100px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #fff;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+            letter-spacing: -0.5px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #a1a1aa;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #a1a1aa;
+            line-height: 1.7;
+        }
+
+        a {
+            color: #c084fc;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #e879f9;
+            text-decoration: underline;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 60px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+            color: #fff;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(168, 85, 247, 0.3);
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #27272a;
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: #52525b;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            h2 { font-size: 20px; }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="Logo.png" alt="CliqifyThings">
+                <span>CliqifyThings</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#brands">Brands</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: May 19, 2026</p>
+        </div>
+    </section>
+
+    <div class="content">
+        <h2>1. Information We Collect</h2>
+        <p>CliqifyThings does not intentionally collect personally identifiable information directly from visitors.</p>
+        <p>Our website currently does not include:</p>
+        <ul>
+            <li>User accounts</li>
+            <li>Public forms</li>
+            <li>Comments</li>
+            <li>Uploads</li>
+            <li>Payment systems</li>
+        </ul>
+
+        <h2>2. Use of Information</h2>
+        <p>We do not:</p>
+        <ul>
+            <li>Sell user data</li>
+            <li>Intentionally collect personal data</li>
+            <li>Process payments</li>
+            <li>Operate user profiles or accounts</li>
+        </ul>
+        <p>Any information automatically collected by hosting providers, analytics services, or third-party platforms is governed by their respective privacy policies.</p>
+
+        <h2>3. Third-Party Platforms</h2>
+        <p>Our content may be distributed through third-party services including:</p>
+        <ul>
+            <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        </ul>
+        <p>These platforms may use cookies, analytics, tracking technologies, or collect viewer data according to their own policies.</p>
+        <p>Please refer to their privacy policies for additional information.</p>
+
+        <h2>4. Affiliate Links</h2>
+        <p>Some content may contain affiliate links.</p>
+        <p>As an Amazon Associate, we earn from qualifying purchases.</p>
+        <p>Affiliate links do not increase the purchase price paid by users.</p>
+
+        <h2>5. Third-Party Assets</h2>
+        <p>Our content may include:</p>
+        <ul>
+            <li>Stock footage from free platforms (Pexels)</li>
+            <li>AI-generated narration (Kokoro TTS — Apache 2.0 licensed)</li>
+            <li>Royalty-free music</li>
+            <li>Product images from public listings</li>
+        </ul>
+        <p>These materials are used under applicable licenses or editorial/review purposes where applicable.</p>
+
+        <h2>6. Data Security</h2>
+        <p>Because our website is primarily static and does not process user accounts or public submissions, the amount of user data handled directly by CliqifyThings is minimal.</p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>Our content is not specifically directed toward children under 13.</p>
+        <p>Parents and guardians are responsible for supervising online activity and determining age appropriateness.</p>
+
+        <h2>8. Copyright Requests</h2>
+        <p>For copyright concerns or content removal requests, contact:</p>
+        <p><a href="mailto:cliqifythings@outlook.com" target="_blank">cliqifythings@outlook.com</a></p>
+
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy periodically. Updates will be reflected by the revised "Last updated" date.</p>
+
+        <h2>10. Contact</h2>
+        <p>For privacy, legal, or business inquiries:</p>
+        <p><a href="mailto:cliqifythings@outlook.com" target="_blank">cliqifythings@outlook.com</a></p>
+
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CliqifyThings. All rights reserved.</p>
+    </footer>
+</body>
+</html>
