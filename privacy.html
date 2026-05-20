@@ -1,262 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — CliqifyThings</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — CliqifyThings</title>
+  <meta name="description" content="Privacy Policy for CliqifyThings, CliqifyFacts, and CliqifyFinds.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="Logo.png">
 
-        html {
-            scroll-behavior: smooth;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #e4e4e7;
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+  <style>
+    :root {
+      --bg:       #080808;
+      --bg-1:     #0f0f0f;
+      --border:   rgba(255,255,255,0.07);
+      --text:     #f0f0f0;
+      --muted:    #888;
+      --faint:    #444;
+      --purple:   #a855f7;
+      --purple-l: #d8a8ff;
+    }
 
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0a0a0a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #27272a;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #3f3f46;
-        }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-        /* Back Link */
-        .back-bar {
-            padding: 24px;
-            border-bottom: 1px solid rgba(39, 39, 42, 0.5);
-        }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg); color: var(--text);
+      line-height: 1.7; overflow-x: hidden;
+    }
 
-        .back-bar a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #a1a1aa;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
 
-        .back-bar a:hover {
-            color: #fff;
-        }
+    :focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; border-radius: 4px; }
 
-        /* Hero */
-        .hero {
-            min-height: 30vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 60px 24px 40px;
-            position: relative;
-            overflow: hidden;
-        }
+    /* ── BACK BAR ── */
+    .back-bar {
+      padding: 20px 32px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(8,8,8,0.95);
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(12px);
+    }
+    .back-bar a {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--muted); text-decoration: none;
+      font-size: 13px; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .back-bar a:hover { color: var(--text); }
+    .back-bar a svg { width: 16px; height: 16px; }
 
-        .hero-bg {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
-            pointer-events: none;
-        }
+    /* ── HERO ── */
+    .hero {
+      padding: 72px 24px 48px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 500px 300px at 50% 50%, rgba(168,85,247,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; }
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--purple);
+      background: rgba(168,85,247,0.08);
+      border: 1px solid rgba(168,85,247,0.2);
+      padding: 5px 14px; border-radius: 100px;
+      margin-bottom: 20px;
+    }
 
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 900;
-            color: #fff;
-            margin-bottom: 12px;
-            letter-spacing: -2px;
-            background: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #e879f9 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 800; letter-spacing: -2px;
+      background: linear-gradient(145deg, #fff, var(--purple-l) 70%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+    }
+    .hero-meta { font-size: 13px; color: var(--faint); }
 
-        .hero p {
-            font-size: 15px;
-            color: #71717a;
-        }
+    /* ── CONTENT ── */
+    .content {
+      max-width: 720px; margin: 0 auto;
+      padding: 16px 24px 96px;
+    }
 
-        /* Content */
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 24px 80px;
-        }
+    .toc {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: 16px; padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+    .toc-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--faint);
+      margin-bottom: 16px;
+    }
+    .toc ol { padding-left: 20px; }
+    .toc li { margin-bottom: 7px; }
+    .toc a {
+      color: var(--muted); text-decoration: none;
+      font-size: 14px; font-weight: 400;
+      transition: color 0.2s;
+    }
+    .toc a:hover { color: var(--purple-l); }
 
-        h2 {
-            font-size: 20px;
-            font-weight: 800;
-            color: #fff;
-            margin-top: 40px;
-            margin-bottom: 14px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
-            letter-spacing: -0.5px;
-        }
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px; font-weight: 700; letter-spacing: -0.3px;
+      color: var(--text);
+      margin-top: 52px; margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(168,85,247,0.12);
+    }
 
-        h2:first-of-type {
-            margin-top: 0;
-        }
+    p {
+      margin-bottom: 14px;
+      color: var(--muted); font-size: 15px; line-height: 1.8;
+      font-weight: 300;
+    }
 
-        p {
-            margin-bottom: 14px;
-            color: #a1a1aa;
-            line-height: 1.8;
-        }
+    ul, ol { padding-left: 22px; margin-bottom: 16px; }
+    li {
+      margin-bottom: 8px;
+      color: var(--muted); font-size: 15px; line-height: 1.7;
+      font-weight: 300;
+    }
 
-        ul {
-            margin-left: 24px;
-            margin-bottom: 14px;
-        }
+    a { color: var(--purple-l); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #e879f9; text-decoration: underline; }
 
-        li {
-            margin-bottom: 8px;
-            color: #a1a1aa;
-            line-height: 1.7;
-        }
+    strong { color: var(--text); font-weight: 500; }
 
-        a {
-            color: #c084fc;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px; text-align: center;
+    }
+    footer p { font-size: 12px; color: #2a2a2a; margin: 0; }
 
-        a:hover {
-            color: #e879f9;
-            text-decoration: underline;
-        }
+    @media (max-width: 600px) {
+      .back-bar { padding: 16px 20px; }
+      .toc { padding: 20px 20px; }
+    }
 
-        /* Footer */
-        footer {
-            border-top: 1px solid #27272a;
-            padding: 32px 24px;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 12px;
-            color: #3f3f46;
-            margin: 0;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 36px; }
-            h2 { font-size: 18px; }
-        }
-    </style>
-<base target="_blank">
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
 </head>
 <body>
-    <div class="back-bar">
-        <a href="index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            Back to Home
-        </a>
+
+  <div class="back-bar">
+    <a href="index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Home
+    </a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Legal</div>
+      <h1>Privacy Policy</h1>
+      <p class="hero-meta">Last updated: May 19, 2026</p>
     </div>
+  </section>
 
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <h1>Privacy Policy</h1>
-            <p>Last updated: May 19, 2026</p>
-        </div>
-    </section>
+  <div class="content">
 
-    <div class="content">
-        <h2>1. Information We Collect</h2>
-        <p>CliqifyThings does not intentionally collect personally identifiable information directly from visitors.</p>
-        <p>Our website currently does not include:</p>
-        <ul>
-            <li>User accounts</li>
-            <li>Public forms</li>
-            <li>Comments</li>
-            <li>Uploads</li>
-            <li>Payment systems</li>
-        </ul>
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="#s1">Information We Collect</a></li>
+        <li><a href="#s2">Use of Information</a></li>
+        <li><a href="#s3">Third-Party Platforms</a></li>
+        <li><a href="#s4">Affiliate Links</a></li>
+        <li><a href="#s5">Third-Party Assets</a></li>
+        <li><a href="#s6">Data Security</a></li>
+        <li><a href="#s7">Children's Privacy</a></li>
+        <li><a href="#s8">Copyright Requests</a></li>
+        <li><a href="#s9">Changes to This Policy</a></li>
+        <li><a href="#s10">Contact</a></li>
+      </ol>
+    </nav>
 
-        <h2>2. Use of Information</h2>
-        <p>We do not:</p>
-        <ul>
-            <li>Sell user data</li>
-            <li>Intentionally collect personal data</li>
-            <li>Process payments</li>
-            <li>Operate user profiles or accounts</li>
-        </ul>
-        <p>Any information automatically collected by hosting providers, analytics services, or third-party platforms is governed by their respective privacy policies.</p>
+    <h2 id="s1">1. Information We Collect</h2>
+    <p>CliqifyThings does not intentionally collect personally identifiable information directly from visitors.</p>
+    <p>Our website currently does not include:</p>
+    <ul>
+      <li>User accounts</li>
+      <li>Public forms</li>
+      <li>Comments</li>
+      <li>Uploads</li>
+      <li>Payment systems</li>
+    </ul>
 
-        <h2>3. Third-Party Platforms</h2>
-        <p>Our content may be distributed through third-party services including:</p>
-        <ul>
-            <li><a href="https://www.youtube.com">YouTube</a></li>
-            <li><a href="https://www.instagram.com">Instagram</a></li>
-            <li><a href="https://www.facebook.com">Facebook</a></li>
-        </ul>
-        <p>These platforms may use cookies, analytics, tracking technologies, or collect viewer data according to their own policies.</p>
-        <p>Please refer to their privacy policies for additional information.</p>
+    <h2 id="s2">2. Use of Information</h2>
+    <p>We do not:</p>
+    <ul>
+      <li>Sell user data</li>
+      <li>Intentionally collect personal data</li>
+      <li>Process payments</li>
+      <li>Operate user profiles or accounts</li>
+    </ul>
+    <p>Any information automatically collected by hosting providers, analytics services, or third-party platforms is governed by their respective privacy policies.</p>
 
-        <h2>4. Affiliate Links</h2>
-        <p>Some content may contain affiliate links.</p>
-        <p>As an Amazon Associate, we earn from qualifying purchases.</p>
-        <p>Affiliate links do not increase the purchase price paid by users.</p>
+    <h2 id="s3">3. Third-Party Platforms</h2>
+    <p>Our content may be distributed through third-party services including:</p>
+    <ul>
+      <li><a href="https://www.youtube.com">YouTube</a></li>
+      <li><a href="https://www.instagram.com">Instagram</a></li>
+      <li><a href="https://www.facebook.com">Facebook</a></li>
+    </ul>
+    <p>These platforms may use cookies, analytics, tracking technologies, or collect viewer data according to their own policies. Please refer to their privacy policies for additional information.</p>
 
-        <h2>5. Third-Party Assets</h2>
-        <p>Our content may include:</p>
-        <ul>
-            <li>Stock footage from free platforms (Pexels)</li>
-            <li>AI-generated narration (Kokoro TTS — Apache 2.0 licensed)</li>
-            <li>Royalty-free music</li>
-            <li>Product images from public listings</li>
-        </ul>
-        <p>These materials are used under applicable licenses or editorial/review purposes where applicable.</p>
+    <h2 id="s4">4. Affiliate Links</h2>
+    <p>Some content may contain affiliate links.</p>
+    <p>As an Amazon Associate, we earn from qualifying purchases.</p>
+    <p>Affiliate links do not increase the purchase price paid by users.</p>
 
-        <h2>6. Data Security</h2>
-        <p>Because our website is primarily static and does not process user accounts or public submissions, the amount of user data handled directly by CliqifyThings is minimal.</p>
+    <h2 id="s5">5. Third-Party Assets</h2>
+    <p>Our content may include:</p>
+    <ul>
+      <li>Stock footage from free platforms such as <a href="https://www.pexels.com">Pexels</a></li>
+      <li>AI-generated narration (Kokoro TTS — Apache 2.0 licensed)</li>
+      <li>Royalty-free music</li>
+      <li>Product images from public listings</li>
+    </ul>
+    <p>These materials are used under applicable licenses or editorial/review purposes where applicable.</p>
 
-        <h2>7. Children's Privacy</h2>
-        <p>Our content is not specifically directed toward children under 13.</p>
-        <p>Parents and guardians are responsible for supervising online activity and determining age appropriateness.</p>
+    <h2 id="s6">6. Data Security</h2>
+    <p>Because our website is primarily static and does not process user accounts or public submissions, the amount of user data handled directly by CliqifyThings is minimal.</p>
 
-        <h2>8. Copyright Requests</h2>
-        <p>For copyright concerns or content removal requests, contact:</p>
-        <p><a href="mailto:cliqifythings@outlook.com">cliqifythings@outlook.com</a></p>
+    <h2 id="s7">7. Children's Privacy</h2>
+    <p>Our content is not specifically directed toward children under 13. Parents and guardians are responsible for supervising online activity and determining age appropriateness.</p>
 
-        <h2>9. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy periodically. Updates will be reflected by the revised "Last updated" date.</p>
+    <h2 id="s8">8. Copyright Requests</h2>
+    <p>For copyright concerns or content removal requests, contact:</p>
+    <p><a href="mailto:cliqifythings@outlook.com">cliqifythings@outlook.com</a></p>
 
-        <h2>10. Contact</h2>
-        <p>For privacy, legal, or business inquiries:</p>
-        <p><a href="mailto:cliqifythings@outlook.com">cliqifythings@outlook.com</a></p>
-    </div>
+    <h2 id="s9">9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy periodically. Updates will be reflected by the revised "Last updated" date.</p>
 
-    <footer>
-        <p>&copy; 2026 CliqifyThings. All rights reserved.</p>
-    </footer>
+    <h2 id="s10">10. Contact</h2>
+    <p>For privacy, legal, or business inquiries:</p>
+    <p><a href="mailto:cliqifythings@outlook.com">cliqifythings@outlook.com</a></p>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 CliqifyThings. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
