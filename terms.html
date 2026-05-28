@@ -4,161 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service — CliqifyThings</title>
-  <meta name="description" content="Terms of Service for CliqifyThings, CliqifyFacts, and CliqifyFinds.">
+  <meta name="description" content="Terms of Service for CliqifyThings, CliqifyFacts, CliqifyFinds, and CliqifyBeats.">
   <meta name="robots" content="index, follow">
   <link rel="icon" href="Logo.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-
   <style>
     :root {
-      --bg:       #080808;
-      --bg-1:     #0f0f0f;
-      --border:   rgba(255,255,255,0.07);
-      --text:     #f0f0f0;
-      --muted:    #888;
-      --faint:    #444;
-      --purple:   #a855f7;
-      --purple-l: #d8a8ff;
+      --bg:#080808;--bg-1:#0f0f0f;--border:rgba(255,255,255,0.07);
+      --text:#f0f0f0;--muted:#888;--faint:#444;
+      --purple:#a855f7;--purple-l:#d8a8ff;
     }
-
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg); color: var(--text);
-      line-height: 1.7; overflow-x: hidden;
-    }
-
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
-
-    :focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; border-radius: 4px; }
-
-    /* ── BACK BAR ── */
-    .back-bar {
-      padding: 20px 32px;
-      border-bottom: 1px solid var(--border);
-      background: rgba(8,8,8,0.95);
-      position: sticky; top: 0; z-index: 10;
-      backdrop-filter: blur(12px);
-    }
-    .back-bar a {
-      display: inline-flex; align-items: center; gap: 8px;
-      color: var(--muted); text-decoration: none;
-      font-size: 13px; font-weight: 500;
-      transition: color 0.2s;
-    }
-    .back-bar a:hover { color: var(--text); }
-    .back-bar a svg { width: 16px; height: 16px; }
-
-    /* ── HERO ── */
-    .hero {
-      padding: 72px 24px 48px; text-align: center;
-      position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 500px 300px at 50% 50%, rgba(168,85,247,0.07) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-content { position: relative; z-index: 1; }
-
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
-      text-transform: uppercase; color: var(--purple);
-      background: rgba(168,85,247,0.08);
-      border: 1px solid rgba(168,85,247,0.2);
-      padding: 5px 14px; border-radius: 100px;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(36px, 6vw, 56px);
-      font-weight: 800; letter-spacing: -2px;
-      background: linear-gradient(145deg, #fff, var(--purple-l) 70%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 10px;
-    }
-    .hero-meta { font-size: 13px; color: var(--faint); }
-
-    /* ── CONTENT ── */
-    .content {
-      max-width: 720px; margin: 0 auto;
-      padding: 16px 24px 96px;
-    }
-
-    .toc {
-      background: var(--bg-1);
-      border: 1px solid var(--border);
-      border-radius: 16px; padding: 28px 32px;
-      margin-bottom: 56px;
-    }
-    .toc-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 13px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--faint);
-      margin-bottom: 16px;
-    }
-    .toc ol { padding-left: 20px; }
-    .toc li { margin-bottom: 7px; }
-    .toc a {
-      color: var(--muted); text-decoration: none;
-      font-size: 14px; font-weight: 400;
-      transition: color 0.2s;
-    }
-    .toc a:hover { color: var(--purple-l); }
-
-    h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 18px; font-weight: 700; letter-spacing: -0.3px;
-      color: var(--text);
-      margin-top: 52px; margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(168,85,247,0.12);
-    }
-
-    p {
-      margin-bottom: 14px;
-      color: var(--muted); font-size: 15px; line-height: 1.8;
-      font-weight: 300;
-    }
-
-    ul, ol { padding-left: 22px; margin-bottom: 16px; }
-    li {
-      margin-bottom: 8px;
-      color: var(--muted); font-size: 15px; line-height: 1.7;
-      font-weight: 300;
-    }
-
-    a { color: var(--purple-l); text-decoration: none; transition: color 0.2s; }
-    a:hover { color: #e879f9; text-decoration: underline; }
-
-    strong { color: var(--text); font-weight: 500; }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 24px; text-align: center;
-    }
-    footer p { font-size: 12px; color: #2a2a2a; margin: 0; }
-
-    @media (max-width: 600px) {
-      .back-bar { padding: 16px 20px; }
-      .toc { padding: 20px 20px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; }
-    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+    ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}
+    ::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
+    :focus-visible{outline:2px solid var(--purple);outline-offset:3px;border-radius:4px}
+    .back-bar{padding:20px 32px;border-bottom:1px solid var(--border);background:rgba(8,8,8,0.95);position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}
+    .back-bar a{display:inline-flex;align-items:center;gap:8px;color:var(--muted);text-decoration:none;font-size:13px;font-weight:500;transition:color 0.2s}
+    .back-bar a:hover{color:var(--text)}
+    .back-bar a svg{width:16px;height:16px}
+    .hero{padding:72px 24px 48px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 500px 300px at 50% 50%,rgba(168,85,247,0.07) 0%,transparent 70%);pointer-events:none}
+    .hero-content{position:relative;z-index:1}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--purple);background:rgba(168,85,247,0.08);border:1px solid rgba(168,85,247,0.2);padding:5px 14px;border-radius:100px;margin-bottom:20px}
+    .hero h1{font-family:'Syne',sans-serif;font-size:clamp(36px,6vw,56px);font-weight:800;letter-spacing:-2px;background:linear-gradient(145deg,#fff,var(--purple-l) 70%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px}
+    .hero-meta{font-size:13px;color:var(--faint)}
+    .content{max-width:720px;margin:0 auto;padding:16px 24px 96px}
+    .toc{background:var(--bg-1);border:1px solid var(--border);border-radius:16px;padding:28px 32px;margin-bottom:56px}
+    .toc-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--faint);margin-bottom:16px}
+    .toc ol{padding-left:20px}
+    .toc li{margin-bottom:7px}
+    .toc a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:400;transition:color 0.2s}
+    .toc a:hover{color:var(--purple-l)}
+    h2{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;letter-spacing:-0.3px;color:var(--text);margin-top:52px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(168,85,247,0.12)}
+    p{margin-bottom:14px;color:var(--muted);font-size:15px;line-height:1.8;font-weight:300}
+    ul,ol{padding-left:22px;margin-bottom:16px}
+    li{margin-bottom:8px;color:var(--muted);font-size:15px;line-height:1.7;font-weight:300}
+    a{color:var(--purple-l);text-decoration:none;transition:color 0.2s}
+    a:hover{color:#e879f9;text-decoration:underline}
+    strong{color:var(--text);font-weight:500}
+    footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center}
+    footer p{font-size:12px;color:#2a2a2a;margin:0}
+    @media(max-width:600px){.back-bar{padding:16px 20px}.toc{padding:20px 20px}}
+    @media(prefers-reduced-motion:reduce){*{transition:none!important}}
   </style>
 </head>
 <body>
@@ -174,7 +65,7 @@
     <div class="hero-content">
       <div class="hero-badge">Legal</div>
       <h1>Terms of Service</h1>
-      <p class="hero-meta">Last updated: May 19, 2026</p>
+      <p class="hero-meta">Last updated: May 28, 2026</p>
     </div>
   </section>
 
@@ -187,19 +78,20 @@
         <li><a href="#s2">Content Purpose</a></li>
         <li><a href="#s3">No Product Ownership or Endorsement</a></li>
         <li><a href="#s4">Affiliate Disclosure</a></li>
-        <li><a href="#s5">Intellectual Property</a></li>
-        <li><a href="#s6">Third-Party Content Sources</a></li>
-        <li><a href="#s7">Disclaimer of Liability</a></li>
-        <li><a href="#s8">No Professional Advice</a></li>
-        <li><a href="#s9">Third-Party Platforms</a></li>
-        <li><a href="#s10">Copyright Concerns</a></li>
-        <li><a href="#s11">Changes to Terms</a></li>
-        <li><a href="#s12">Contact</a></li>
+        <li><a href="#s5">CliqifyBeats — Music Content</a></li>
+        <li><a href="#s6">Intellectual Property</a></li>
+        <li><a href="#s7">Third-Party Content Sources</a></li>
+        <li><a href="#s8">Disclaimer of Liability</a></li>
+        <li><a href="#s9">No Professional Advice</a></li>
+        <li><a href="#s10">Third-Party Platforms</a></li>
+        <li><a href="#s11">Copyright Concerns</a></li>
+        <li><a href="#s12">Changes to Terms</a></li>
+        <li><a href="#s13">Contact</a></li>
       </ol>
     </nav>
 
     <h2 id="s1">1. Acceptance of Terms</h2>
-    <p>By accessing or viewing content published by CliqifyThings and its sub-brands, including CliqifyFinds and CliqifyFacts, you agree to these Terms of Service. If you do not agree, please discontinue use of our content and website.</p>
+    <p>By accessing or viewing content published by CliqifyThings and its sub-brands, including CliqifyFacts, CliqifyFinds, and CliqifyBeats, you agree to these Terms of Service. If you do not agree, please discontinue use of our content and website.</p>
 
     <h2 id="s2">2. Content Purpose</h2>
     <p>All content published by CliqifyThings is provided for entertainment, informational, and media purposes only.</p>
@@ -222,12 +114,23 @@
     <p>As an Amazon Associate, we earn from qualifying purchases.</p>
     <p>Prices, availability, and product details may change without notice. Viewers are encouraged to conduct their own research before making purchases.</p>
 
-    <h2 id="s5">5. Intellectual Property</h2>
-    <p>Original edits, branding, narration, compilations, subtitles, and creative elements published by CliqifyThings are the property of CliqifyThings.</p>
+    <h2 id="s5">5. CliqifyBeats — Music Content</h2>
+    <p>CliqifyBeats publishes music content for entertainment purposes. By using or engaging with CliqifyBeats content, you acknowledge the following:</p>
+    <ul>
+      <li>Music is generated for entertainment and creative purposes only</li>
+      <li>Background visuals are sourced from third-party providers and may not always perfectly match the audio content</li>
+      <li>Some audio artifacts or imperfections may occur during playback — this is inherent to the nature of the content</li>
+      <li>CliqifyBeats does not guarantee any specific audio quality standard</li>
+      <li>We are not responsible for how beats or music content is used by third parties</li>
+    </ul>
+    <p>All original CliqifyBeats music content is the property of CliqifyThings. Unauthorized redistribution or commercial reuse without permission is prohibited.</p>
+
+    <h2 id="s6">6. Intellectual Property</h2>
+    <p>Original edits, branding, narration, compilations, subtitles, music, and creative elements published by CliqifyThings are the property of CliqifyThings.</p>
     <p>Third-party assets, including stock footage, product images, music, and other licensed materials, remain the property of their respective owners.</p>
     <p>Unauthorized reproduction, redistribution, or commercial reuse of original CliqifyThings content is prohibited.</p>
 
-    <h2 id="s6">6. Third-Party Content Sources</h2>
+    <h2 id="s7">7. Third-Party Content Sources</h2>
     <p>Our content may incorporate third-party assets including:</p>
     <ul>
       <li>Stock footage sourced from platforms such as <a href="https://www.pexels.com" target="_blank" rel="noopener noreferrer">Pexels</a></li>
@@ -237,7 +140,7 @@
     </ul>
     <p>Third-party assets are used under applicable licenses, platform permissions, or editorial/review purposes where applicable.</p>
 
-    <h2 id="s7">7. Disclaimer of Liability</h2>
+    <h2 id="s8">8. Disclaimer of Liability</h2>
     <p>CliqifyThings is not liable for:</p>
     <ul>
       <li>Purchasing decisions or financial losses related to featured products</li>
@@ -246,24 +149,25 @@
       <li>Technical interruptions or errors</li>
       <li>Third-party websites, products, or services linked within our content</li>
       <li>Any direct or indirect damages arising from use of our content</li>
+      <li>Audio or visual imperfections in CliqifyBeats content</li>
     </ul>
     <p>All content is consumed at the viewer's discretion.</p>
 
-    <h2 id="s8">8. No Professional Advice</h2>
+    <h2 id="s9">9. No Professional Advice</h2>
     <p>Content published by CliqifyThings does not constitute professional, legal, financial, medical, or technical advice.</p>
     <p>Always consult qualified professionals before making decisions based on online content.</p>
 
-    <h2 id="s9">9. Third-Party Platforms</h2>
+    <h2 id="s10">10. Third-Party Platforms</h2>
     <p>Our content may be distributed through platforms including <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>, <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>, and <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>. Use of these platforms is also subject to their own terms, policies, and community guidelines.</p>
 
-    <h2 id="s10">10. Copyright Concerns</h2>
+    <h2 id="s11">11. Copyright Concerns</h2>
     <p>If you believe copyrighted material has been used improperly, please contact us and we will review the matter promptly.</p>
     <p>Contact: <a href="mailto:cliqifythings@outlook.com">cliqifythings@outlook.com</a></p>
 
-    <h2 id="s11">11. Changes to Terms</h2>
+    <h2 id="s12">12. Changes to Terms</h2>
     <p>We may update these Terms of Service at any time without prior notice. Continued use of our content after updates constitutes acceptance of the revised terms.</p>
 
-    <h2 id="s12">12. Contact</h2>
+    <h2 id="s13">13. Contact</h2>
     <p>For business inquiries, partnerships, or legal concerns:</p>
     <p><a href="mailto:cliqifythings@outlook.com">cliqifythings@outlook.com</a></p>
 
